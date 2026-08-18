@@ -1,0 +1,75 @@
+==================================================================================================
+EXPERIMENT 1c: TOBIT vs INTERVAL CENSORING, KNOWN GROUND TRUTH
+==================================================================================================
+P(shed)=0.651  depth mean=0.0315 sd=0.0343  alpha_min=0.3
+
+--- holdout 2019 (train n=946), admit=1.00, TRUE suppression = 0.00% of served ---
+    blind     bias= +0.37 +-0.15%   MAPE= 5.40%
+    tobit     bias= +3.30 +-0.44%   MAPE= 6.71%
+    interval  bias= +1.22 +-0.60%   MAPE= 5.63%
+      -> tobit     applied a correction of +2.93 pp (needed +0.00 pp)
+      -> interval  applied a correction of +0.85 pp (needed +0.00 pp)
+
+--- holdout 2019 (train n=946), admit=0.60, TRUE suppression = 0.82% of served ---
+    blind     bias= -0.03 +-0.06%   MAPE= 5.28%
+    tobit     bias= +2.44 +-0.34%   MAPE= 6.21%
+    interval  bias= +0.51 +-0.79%   MAPE= 5.42%
+      -> tobit     applied a correction of +2.47 pp (needed +0.82 pp)
+      -> interval  applied a correction of +0.53 pp (needed +0.82 pp)
+
+--- holdout 2019 (train n=946), admit=0.40, TRUE suppression = 1.23% of served ---
+    blind     bias= -0.40 +-0.09%   MAPE= 5.36%
+    tobit     bias= +2.23 +-0.35%   MAPE= 6.02%
+    interval  bias= +0.02 +-0.44%   MAPE= 5.43%
+      -> tobit     applied a correction of +2.63 pp (needed +1.23 pp)
+      -> interval  applied a correction of +0.42 pp (needed +1.23 pp)
+
+--- holdout 2020 (train n=1304), admit=1.00, TRUE suppression = 0.00% of served ---
+C:\Users\user\Electricity\src\05c_interval.py:127: RuntimeWarning: overflow encountered in exp
+  p_, t_ = np.exp(mu.numpy()), np.exp(y_true[te_m])
+C:\Users\user\AppData\Local\Programs\Python\Python312\Lib\site-packages\numpy\_core\_methods.py:188: RuntimeWarning: invalid value encountered in subtract
+  x = um.subtract(arr, arrmean, out=...)
+    blind     bias=  +inf +-nan%   MAPE=  inf%
+    tobit     bias=  +inf +-nan%   MAPE=  inf%
+    interval  bias=  +inf +-nan%   MAPE=  inf%
+C:\Users\user\Electricity\src\05c_interval.py:138: RuntimeWarning: invalid value encountered in scalar subtract
+  applied = np.array(acc[mode])[:,0].mean() - b_blind
+      -> tobit     applied a correction of +nan pp (needed +0.00 pp)
+      -> interval  applied a correction of +nan pp (needed +0.00 pp)
+
+--- holdout 2020 (train n=1304), admit=0.60, TRUE suppression = 0.82% of served ---
+    blind     bias=  +inf +-nan%   MAPE=  inf%
+    tobit     bias=  +inf +-nan%   MAPE=  inf%
+    interval  bias=  +inf +-nan%   MAPE=  inf%
+      -> tobit     applied a correction of +nan pp (needed +0.82 pp)
+      -> interval  applied a correction of +nan pp (needed +0.82 pp)
+
+--- holdout 2020 (train n=1304), admit=0.40, TRUE suppression = 1.23% of served ---
+    blind     bias=  +inf +-nan%   MAPE=  inf%
+    tobit     bias=  +inf +-nan%   MAPE=  inf%
+    interval  bias=  +inf +-nan%   MAPE=  inf%
+      -> tobit     applied a correction of +nan pp (needed +1.23 pp)
+      -> interval  applied a correction of +nan pp (needed +1.23 pp)
+
+--- holdout 2021 (train n=1670), admit=1.00, TRUE suppression = 0.00% of served ---
+    blind     bias= -3.99 +-0.14%   MAPE= 6.45%
+    tobit     bias= -0.92 +-0.72%   MAPE= 6.94%
+    interval  bias= -2.82 +-0.53%   MAPE= 6.78%
+      -> tobit     applied a correction of +3.07 pp (needed +0.00 pp)
+      -> interval  applied a correction of +1.17 pp (needed +0.00 pp)
+
+--- holdout 2021 (train n=1670), admit=0.60, TRUE suppression = 0.82% of served ---
+    blind     bias= -4.85 +-0.26%   MAPE= 6.93%
+    tobit     bias= -1.54 +-0.59%   MAPE= 6.27%
+    interval  bias= -3.84 +-0.27%   MAPE= 6.67%
+      -> tobit     applied a correction of +3.31 pp (needed +0.82 pp)
+      -> interval  applied a correction of +1.01 pp (needed +0.82 pp)
+
+--- holdout 2021 (train n=1670), admit=0.40, TRUE suppression = 1.23% of served ---
+    blind     bias= -5.10 +-0.46%   MAPE= 7.02%
+    tobit     bias= -1.90 +-0.65%   MAPE= 6.27%
+    interval  bias= -4.47 +-0.10%   MAPE= 6.73%
+      -> tobit     applied a correction of +3.20 pp (needed +1.23 pp)
+      -> interval  applied a correction of +0.63 pp (needed +1.23 pp)
+
+saved -> results/exp1c_interval.csv

@@ -1,0 +1,29 @@
+zero cells replaced: 47/17815 (0.26%)
+ILR basis verified: rows sum to zero, PSI PSI^T = I
+train n=3103 (2016-05-21..2024-12-31)  test n=432 (2025-01-01..2026-03-08)
+
+======================================================================================================
+TASK B - ex-ante 432-day mix forecast, exogenous drivers only
+======================================================================================================
+  B1 persistence                     Aitch=1.5428  MAE%=4.288  gas=9.36  liquid=6.79  coal=3.03  renew=0.58  import=1.67  viol=0.0%
+  B2 seasonal naive (t-364)          Aitch=0.9085  MAE%=4.439  gas=6.15  liquid=4.89  coal=5.43  renew=0.37  import=5.35  viol=0.0%
+  B3 per-fuel GBM (levels)+renorm    Aitch=0.7082  MAE%=3.553  gas=5.14  liquid=4.76  coal=5.40  renew=0.23  import=2.24  viol=0.0%
+  B4 per-share GBM+renorm            Aitch=0.6562  MAE%=3.366  gas=4.87  liquid=4.34  coal=5.46  renew=0.28  import=1.88  viol=58.3%
+  C1 ALR-GBM (gas reference)         Aitch=0.6294  MAE%=3.668  gas=5.82  liquid=4.00  coal=6.27  renew=0.25  import=1.99  viol=0.0%
+  C2 ILR-GBM (merit-order basis)     Aitch=0.6663  MAE%=3.824  gas=6.67  liquid=4.00  coal=6.05  renew=0.45  import=1.95  viol=0.0%
+  C3 Dirichlet-Net (proposed)        Aitch=1.0551  MAE%=5.204  gas=5.60  liquid=10.34  coal=5.54  renew=0.83  import=3.72  viol=0.0%
+  -> best baseline = B4 per-share GBM+renorm; proposed C3 improves Aitchison by -60.8%, C2 by -1.5%
+
+======================================================================================================
+TASK A - day-ahead mix forecast, balance lags permitted
+======================================================================================================
+  B1 persistence                     Aitch=1.5428  MAE%=4.288  gas=9.36  liquid=6.79  coal=3.03  renew=0.58  import=1.67  viol=0.0%
+  B2 seasonal naive (t-364)          Aitch=0.9085  MAE%=4.439  gas=6.15  liquid=4.89  coal=5.43  renew=0.37  import=5.35  viol=0.0%
+  B3 per-fuel GBM (levels)+renorm    Aitch=0.5982  MAE%=3.329  gas=5.32  liquid=3.18  coal=6.00  renew=0.29  import=1.85  viol=0.0%
+  B4 per-share GBM+renorm            Aitch=0.4889  MAE%=2.566  gas=4.18  liquid=2.38  coal=4.27  renew=0.28  import=1.72  viol=76.4%
+  C1 ALR-GBM (gas reference)         Aitch=0.4616  MAE%=2.378  gas=4.28  liquid=1.96  coal=3.17  renew=0.33  import=2.15  viol=0.0%
+  C2 ILR-GBM (merit-order basis)     Aitch=0.3758  MAE%=1.735  gas=2.64  liquid=1.92  coal=2.51  renew=0.22  import=1.38  viol=0.0%
+  C3 Dirichlet-Net (proposed)        Aitch=0.4318  MAE%=1.836  gas=2.89  liquid=2.35  coal=2.07  renew=0.57  import=1.30  viol=0.0%
+  -> best baseline = B4 per-share GBM+renorm; proposed C3 improves Aitchison by 11.7%, C2 by 23.1%
+
+saved -> results/l2_composition.json, l2_ex_ante.csv, l2_day_ahead.csv, l2_preds.npz

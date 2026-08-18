@@ -1,0 +1,7 @@
+holdout,admit,dcg_bias,dcg_bias_sd,dcg_mape,naive_bias,naive_bias_sd,naive_mape,bias_reduction_pp
+holdout 2019 (normal growth),1.0,4.103,0.261,7.127,0.251,0.15,5.523,-3.851
+holdout 2019 (normal growth),0.6,3.093,0.231,6.427,-0.469,0.493,5.345,-2.624
+holdout 2019 (normal growth),0.4,2.826,0.306,6.206,-0.868,0.682,5.417,-1.958
+holdout 2021 (post-COVID rebound),1.0,-0.264,1.193,7.099,-4.462,0.623,6.956,4.197
+holdout 2021 (post-COVID rebound),0.6,-1.339,0.711,6.559,-4.907,0.839,7.12,3.568
+holdout 2021 (post-COVID rebound),0.4,-1.514,0.851,6.495,-5.451,0.948,7.465,3.938

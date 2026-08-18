@@ -1,0 +1,40 @@
+
+============================================================================
+TASK A - day-ahead (h=1), AR features permitted
+============================================================================
+  Seasonal naive (t-364)             MAPE= 8.916%  RMSE=   33444  MAE=   25674
+  Ridge                              MAPE= 4.141%  RMSE=   16410  MAE=   12228
+  Random Forest                      MAPE= 3.892%  RMSE=   14543  MAE=   11158
+  XGBoost                            MAPE= 4.533%  RMSE=   16555  MAE=   13054
+  MLP                                MAPE= 2.408%  RMSE=    9985  MAE=    6932
+  LSTM                               MAPE= 4.502%  RMSE=   17292  MAE=   12746
+  DCG-blind (ablation)               MAPE= 2.333%  RMSE=    9772  MAE=    6586
+  DCG censoring-aware (proposed)     MAPE=10.468%  RMSE=   34955  MAE=   29846
+  [DM reference = best conventional baseline: MLP]
+    DM Seasonal naive (t-364)           stat= -8.944  p=0.0000 **
+    DM Ridge                            stat= -8.828  p=0.0000 **
+    DM Random Forest                    stat= -8.030  p=0.0000 **
+    DM XGBoost                          stat= -8.842  p=0.0000 **
+    DM LSTM                             stat= -8.062  p=0.0000 **
+    DM DCG-blind (ablation)             stat= +0.876  p=0.3810 
+    DM DCG censoring-aware (proposed)   stat=-19.589  p=0.0000 **
+
+============================================================================
+TASK B - ex-ante 433-day horizon, exogenous only (no target leakage)
+============================================================================
+  Seasonal naive (t-364)             MAPE= 8.916%  RMSE=   33444  MAE=   25674
+  Ridge                              MAPE= 4.319%  RMSE=   15749  MAE=   11722
+  Random Forest                      MAPE= 8.246%  RMSE=   26714  MAE=   23577
+  XGBoost                            MAPE= 7.745%  RMSE=   24730  MAE=   22062
+  MLP                                MAPE= 4.492%  RMSE=   16315  MAE=   13077
+  DCG-blind (ablation)               MAPE= 3.453%  RMSE=   14621  MAE=    9750
+  DCG censoring-aware (proposed)     MAPE= 5.844%  RMSE=   19291  MAE=   15961
+  [DM reference = best conventional baseline: Ridge]
+    DM Seasonal naive (t-364)           stat= -7.540  p=0.0000 **
+    DM Random Forest                    stat=-12.124  p=0.0000 **
+    DM XGBoost                          stat=-11.119  p=0.0000 **
+    DM MLP                              stat= -0.841  p=0.4004 
+    DM DCG-blind (ablation)             stat= +1.913  p=0.0558 
+    DM DCG censoring-aware (proposed)   stat= -7.335  p=0.0000 **
+
+saved -> results/l1_forecast.json, l1_task_a.csv, l1_task_b.csv, l1_preds.npz

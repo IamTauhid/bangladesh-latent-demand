@@ -1,0 +1,21 @@
+============================================================================
+EXPERIMENT 1: SYNTHETIC CENSORING RECOVERY
+============================================================================
+uncensored era n=2035 | crisis era n=1096  P(shed)=0.651  curtailment depth mean=0.0315 sd=0.0343
+--- holdout 2019 (normal growth): train n=946, test n=358 ---
+  admit=1.00 | DCG   bias  +4.10+-0.26%  MAPE  7.13%
+              | Naive bias  +0.25+-0.15%  MAPE  5.52%   -> |bias| reduced -3.85 pp
+  admit=0.60 | DCG   bias  +3.09+-0.23%  MAPE  6.43%
+              | Naive bias  -0.47+-0.49%  MAPE  5.35%   -> |bias| reduced -2.62 pp
+  admit=0.40 | DCG   bias  +2.83+-0.31%  MAPE  6.21%
+              | Naive bias  -0.87+-0.68%  MAPE  5.42%   -> |bias| reduced -1.96 pp
+
+--- holdout 2021 (post-COVID rebound): train n=1670, test n=365 ---
+  admit=1.00 | DCG   bias  -0.26+-1.19%  MAPE  7.10%
+              | Naive bias  -4.46+-0.62%  MAPE  6.96%   -> |bias| reduced +4.20 pp
+  admit=0.60 | DCG   bias  -1.34+-0.71%  MAPE  6.56%
+              | Naive bias  -4.91+-0.84%  MAPE  7.12%   -> |bias| reduced +3.57 pp
+  admit=0.40 | DCG   bias  -1.51+-0.85%  MAPE  6.49%
+              | Naive bias  -5.45+-0.95%  MAPE  7.46%   -> |bias| reduced +3.94 pp
+
+saved -> results/exp1_synthetic_censoring.csv

@@ -1,0 +1,174 @@
+{
+  "ex_ante": {
+    "B1 persistence": {
+      "aitchison": 1.5428466892341857,
+      "aitchison_med": 1.686368139775679,
+      "mae_total": 4.287597300885236,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 9.362623328305288,
+      "mae_liquid": 6.791418371289584,
+      "mae_coal": 3.034159192814842,
+      "mae_renew": 0.579836711923842,
+      "mae_import": 1.6699489000926258,
+      "aitch_gain_vs_B4 per-share GBM+renorm": -135.1
+    },
+    "B2 seasonal naive (t-364)": {
+      "aitchison": 0.9084626940038518,
+      "aitchison_med": 0.8563996122022308,
+      "mae_total": 4.4388797091655094,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 6.151547363123594,
+      "mae_liquid": 4.889328158686452,
+      "mae_coal": 5.43477824647415,
+      "mae_renew": 0.37018490316804953,
+      "mae_import": 5.348559874375308,
+      "aitch_gain_vs_B4 per-share GBM+renorm": -38.43
+    },
+    "B3 per-fuel GBM (levels)+renorm": {
+      "aitchison": 0.7081596989842831,
+      "aitchison_med": 0.6166534682763862,
+      "mae_total": 3.5529496279825885,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 5.135085654247832,
+      "mae_liquid": 4.760544224120529,
+      "mae_coal": 5.400519122903022,
+      "mae_renew": 0.2268819278865868,
+      "mae_import": 2.241717210754973,
+      "aitch_gain_vs_B4 per-share GBM+renorm": -7.91
+    },
+    "B4 per-share GBM+renorm": {
+      "aitchison": 0.6562426934244359,
+      "aitchison_med": 0.6008537769927988,
+      "mae_total": 3.3658665658915288,
+      "simplex_violation_pct": 58.333333333333336,
+      "mae_gas": 4.872168572958965,
+      "mae_liquid": 4.3439139014252435,
+      "mae_coal": 5.46116574000293,
+      "mae_renew": 0.275946309255043,
+      "mae_import": 1.8761383058154515,
+      "aitch_gain_vs_B4 per-share GBM+renorm": 0.0
+    },
+    "C1 ALR-GBM (gas reference)": {
+      "aitchison": 0.629358544364755,
+      "aitchison_med": 0.5952777721204845,
+      "mae_total": 3.6683022174557878,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 5.819981756597895,
+      "mae_liquid": 4.0007739629669645,
+      "mae_coal": 6.274681154887672,
+      "mae_renew": 0.2544076646068991,
+      "mae_import": 1.9916665482195062,
+      "aitch_gain_vs_B4 per-share GBM+renorm": 4.1
+    },
+    "C2 ILR-GBM (merit-order basis)": {
+      "aitchison": 0.666298879052352,
+      "aitchison_med": 0.6178522977211467,
+      "mae_total": 3.823618266003528,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 6.67331744225769,
+      "mae_liquid": 4.002916438254191,
+      "mae_coal": 6.048820033667747,
+      "mae_renew": 0.4473513387768886,
+      "mae_import": 1.9456860770611188,
+      "aitch_gain_vs_B4 per-share GBM+renorm": -1.53
+    },
+    "C3 Dirichlet-Net (proposed)": {
+      "aitchison": 1.0550846798279667,
+      "aitchison_med": 0.955619238787163,
+      "mae_total": 5.204057528337024,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 5.596006460289529,
+      "mae_liquid": 10.33889508465215,
+      "mae_coal": 5.54372121117433,
+      "mae_renew": 0.8253367745340131,
+      "mae_import": 3.7163281110350965,
+      "aitch_gain_vs_B4 per-share GBM+renorm": -60.78
+    }
+  },
+  "day_ahead": {
+    "B1 persistence": {
+      "aitchison": 1.5428466892341857,
+      "aitchison_med": 1.686368139775679,
+      "mae_total": 4.287597300885236,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 9.362623328305288,
+      "mae_liquid": 6.791418371289584,
+      "mae_coal": 3.034159192814842,
+      "mae_renew": 0.579836711923842,
+      "mae_import": 1.6699489000926258,
+      "aitch_gain_vs_B4 per-share GBM+renorm": -215.6
+    },
+    "B2 seasonal naive (t-364)": {
+      "aitchison": 0.9084626940038518,
+      "aitchison_med": 0.8563996122022308,
+      "mae_total": 4.4388797091655094,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 6.151547363123594,
+      "mae_liquid": 4.889328158686452,
+      "mae_coal": 5.43477824647415,
+      "mae_renew": 0.37018490316804953,
+      "mae_import": 5.348559874375308,
+      "aitch_gain_vs_B4 per-share GBM+renorm": -85.83
+    },
+    "B3 per-fuel GBM (levels)+renorm": {
+      "aitchison": 0.5981555111387815,
+      "aitchison_med": 0.5299431043405187,
+      "mae_total": 3.328842491475649,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 5.317125073118977,
+      "mae_liquid": 3.1754988116153378,
+      "mae_coal": 6.0044441253817835,
+      "mae_renew": 0.29482029995023085,
+      "mae_import": 1.852324147311915,
+      "aitch_gain_vs_B4 per-share GBM+renorm": -22.36
+    },
+    "B4 per-share GBM+renorm": {
+      "aitchison": 0.4888623115852766,
+      "aitchison_med": 0.39705731607774836,
+      "mae_total": 2.5659013979326195,
+      "simplex_violation_pct": 76.38888888888889,
+      "mae_gas": 4.178199692471023,
+      "mae_liquid": 2.3823048380237366,
+      "mae_coal": 4.270978042110926,
+      "mae_renew": 0.2750411168623761,
+      "mae_import": 1.7229833001950388,
+      "aitch_gain_vs_B4 per-share GBM+renorm": 0.0
+    },
+    "C1 ALR-GBM (gas reference)": {
+      "aitchison": 0.46163803808980935,
+      "aitchison_med": 0.3734201471056571,
+      "mae_total": 2.378197553698016,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 4.282553722980482,
+      "mae_liquid": 1.9638846156672198,
+      "mae_coal": 3.16748392459557,
+      "mae_renew": 0.329298975812136,
+      "mae_import": 2.1477665294346755,
+      "aitch_gain_vs_B4 per-share GBM+renorm": 5.57
+    },
+    "C2 ILR-GBM (merit-order basis)": {
+      "aitchison": 0.3757860660284792,
+      "aitchison_med": 0.282188455667973,
+      "mae_total": 1.7347006070712072,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 2.6359168340355144,
+      "mae_liquid": 1.9218863133332522,
+      "mae_coal": 2.5088570571973894,
+      "mae_renew": 0.22410353155692642,
+      "mae_import": 1.382739299232954,
+      "aitch_gain_vs_B4 per-share GBM+renorm": 23.13
+    },
+    "C3 Dirichlet-Net (proposed)": {
+      "aitchison": 0.4318175831937007,
+      "aitchison_med": 0.38751112420339007,
+      "mae_total": 1.8358962503837035,
+      "simplex_violation_pct": 0.0,
+      "mae_gas": 2.8948223341715935,
+      "mae_liquid": 2.3500501448110707,
+      "mae_coal": 2.0663544122573927,
+      "mae_renew": 0.5680173648950224,
+      "mae_import": 1.3002369957834456,
+      "aitch_gain_vs_B4 per-share GBM+renorm": 11.67
+    }
+  }
+}

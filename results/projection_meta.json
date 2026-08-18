@@ -1,0 +1,13 @@
+{
+  "trend_cagr": 0.06647491455078125,
+  "warming_c_per_yr": 0.025,
+  "horizon_end": "2030-12-31",
+  "weather_replay_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "n_paths": 25
+}

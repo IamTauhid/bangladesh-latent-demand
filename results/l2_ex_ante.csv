@@ -1,0 +1,8 @@
+,aitchison,aitchison_med,mae_total,simplex_violation_pct,mae_gas,mae_liquid,mae_coal,mae_renew,mae_import,aitch_gain_vs_B4 per-share GBM+renorm
+B1 persistence,1.5428,1.6864,4.2876,0.0,9.3626,6.7914,3.0342,0.5798,1.6699,-135.1
+B2 seasonal naive (t-364),0.9085,0.8564,4.4389,0.0,6.1515,4.8893,5.4348,0.3702,5.3486,-38.43
+B3 per-fuel GBM (levels)+renorm,0.7082,0.6167,3.5529,0.0,5.1351,4.7605,5.4005,0.2269,2.2417,-7.91
+B4 per-share GBM+renorm,0.6562,0.6009,3.3659,58.3333,4.8722,4.3439,5.4612,0.2759,1.8761,0.0
+C1 ALR-GBM (gas reference),0.6294,0.5953,3.6683,0.0,5.82,4.0008,6.2747,0.2544,1.9917,4.1
+C2 ILR-GBM (merit-order basis),0.6663,0.6179,3.8236,0.0,6.6733,4.0029,6.0488,0.4474,1.9457,-1.53
+C3 Dirichlet-Net (proposed),1.0551,0.9556,5.2041,0.0,5.596,10.3389,5.5437,0.8253,3.7163,-60.78

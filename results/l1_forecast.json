@@ -1,0 +1,122 @@
+{
+  "task_A_day_ahead": {
+    "Seasonal naive (t-364)": {
+      "MAPE": 8.916,
+      "RMSE": 33443.5,
+      "MAE": 25674.2,
+      "mean_signed_dev_pct": -5.722,
+      "DM_stat": -8.944,
+      "DM_p": 0.0
+    },
+    "Ridge": {
+      "MAPE": 4.141,
+      "RMSE": 16410.2,
+      "MAE": 12227.5,
+      "mean_signed_dev_pct": 2.958,
+      "DM_stat": -8.828,
+      "DM_p": 0.0
+    },
+    "Random Forest": {
+      "MAPE": 3.892,
+      "RMSE": 14543.1,
+      "MAE": 11158.5,
+      "mean_signed_dev_pct": -2.465,
+      "DM_stat": -8.03,
+      "DM_p": 0.0
+    },
+    "XGBoost": {
+      "MAPE": 4.533,
+      "RMSE": 16555.3,
+      "MAE": 13053.8,
+      "mean_signed_dev_pct": -3.816,
+      "DM_stat": -8.842,
+      "DM_p": 0.0
+    },
+    "MLP": {
+      "MAPE": 2.408,
+      "RMSE": 9984.7,
+      "MAE": 6931.9,
+      "mean_signed_dev_pct": -1.024
+    },
+    "LSTM": {
+      "MAPE": 4.502,
+      "RMSE": 17292.5,
+      "MAE": 12745.9,
+      "mean_signed_dev_pct": -1.166,
+      "DM_stat": -8.062,
+      "DM_p": 0.0
+    },
+    "DCG-blind (ablation)": {
+      "MAPE": 2.333,
+      "RMSE": 9772.1,
+      "MAE": 6585.8,
+      "mean_signed_dev_pct": -0.339,
+      "DM_stat": 0.876,
+      "DM_p": 0.381
+    },
+    "DCG censoring-aware (proposed)": {
+      "MAPE": 10.468,
+      "RMSE": 34954.9,
+      "MAE": 29845.5,
+      "mean_signed_dev_pct": 10.313,
+      "DM_stat": -19.589,
+      "DM_p": 0.0
+    }
+  },
+  "task_B_ex_ante": {
+    "Seasonal naive (t-364)": {
+      "MAPE": 8.916,
+      "RMSE": 33443.5,
+      "MAE": 25674.2,
+      "mean_signed_dev_pct": -5.722,
+      "DM_stat": -7.54,
+      "DM_p": 0.0
+    },
+    "Ridge": {
+      "MAPE": 4.319,
+      "RMSE": 15749.2,
+      "MAE": 11722.5,
+      "mean_signed_dev_pct": 2.312
+    },
+    "Random Forest": {
+      "MAPE": 8.246,
+      "RMSE": 26713.6,
+      "MAE": 23577.3,
+      "mean_signed_dev_pct": -7.594,
+      "DM_stat": -12.124,
+      "DM_p": 0.0
+    },
+    "XGBoost": {
+      "MAPE": 7.745,
+      "RMSE": 24729.7,
+      "MAE": 22062.4,
+      "mean_signed_dev_pct": -7.356,
+      "DM_stat": -11.119,
+      "DM_p": 0.0
+    },
+    "MLP": {
+      "MAPE": 4.492,
+      "RMSE": 16315.4,
+      "MAE": 13076.6,
+      "mean_signed_dev_pct": -3.541,
+      "DM_stat": -0.841,
+      "DM_p": 0.4004
+    },
+    "DCG-blind (ablation)": {
+      "MAPE": 3.453,
+      "RMSE": 14620.8,
+      "MAE": 9750.5,
+      "mean_signed_dev_pct": -0.201,
+      "DM_stat": 1.913,
+      "DM_p": 0.0558
+    },
+    "DCG censoring-aware (proposed)": {
+      "MAPE": 5.844,
+      "RMSE": 19291.4,
+      "MAE": 15961.0,
+      "mean_signed_dev_pct": 4.62,
+      "DM_stat": -7.335,
+      "DM_p": 0.0
+    }
+  }
+}

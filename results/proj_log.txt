@@ -1,0 +1,26 @@
+weather replay years: [2021, 2022, 2023, 2024, 2025]
+==============================================================================================
+DEMAND PROJECTION (TWh/yr)
+==============================================================================================
+implied trend CAGR from the ICG linear term: 6.65%/yr
+alpha_min = 0.3 (operator admits at least this share of true shortfall)
+weather replays: [2021, 2022, 2023, 2024, 2025]  x  5 model seeds = 25 paths
+
+      served_TWh  latent_TWh  suppression_%
+date                                       
+2021       82.22   81.750000          -0.57
+2022       87.67   88.779999           1.27
+2023       92.22   95.650002           3.72
+2024       97.79  100.669998           2.95
+2025      104.44  105.379997           0.90
+2026       16.16   16.680000           3.25
+
+      weather_low  central  weather_high  growth_low  growth_high
+2026        99.62   107.42        115.72      106.88       107.96
+2027       105.05   114.06        123.50      111.80       116.33
+2028       112.53   122.13        132.12      117.92       126.43
+2029       119.78   130.20        141.30      123.82       136.81
+2030       127.96   139.17        151.11      130.37       148.43
+
+implied CAGR of central path 2027->2030: 6.86%/yr
+saved -> results/latent_demand.csv, projection_demand.csv, projection_daily.csv

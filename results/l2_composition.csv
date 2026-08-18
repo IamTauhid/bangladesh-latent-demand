@@ -1,0 +1,7 @@
+,aitchison,aitchison_med,mae_total,mae_gas,mae_liquid,mae_coal,mae_renew,mae_import,simplex_violation_pct
+B1 persistence (last obs),1.5428,1.6864,4.2876,9.3626,6.7914,3.0342,0.5798,1.6699,
+B2 seasonal naive (t-364),0.9085,0.8564,4.4389,6.1515,4.8893,5.4348,0.3702,5.3486,
+B3 per-fuel GBM + renormalise,0.7006,0.6052,3.558,5.3227,4.6368,5.3136,0.2342,2.2826,0.0
+B4 per-share GBM + renormalise,0.6476,0.5928,3.3524,4.8617,4.2559,5.434,0.2747,1.9357,66.6667
+C1 ALR-GBM (simplex-closed),0.621,0.5755,3.5625,5.5231,3.9035,6.0316,0.2661,2.0881,0.0
+C2 ALR-MLP ensemble (proposed),0.9276,0.8074,4.5561,5.0909,8.8568,5.9921,0.582,2.2589,0.0

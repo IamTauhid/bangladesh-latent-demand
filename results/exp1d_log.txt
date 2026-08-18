@@ -1,0 +1,22 @@
+==============================================================================================
+EXTENDED SWEEP: does the anti-correlation persist at 3-5 pp true suppression?
+==============================================================================================
+  depth x1, admit 1.00 | TRUE  0.00 pp | Tobit  +3.87 | ICG  +1.22
+  depth x1, admit 0.60 | TRUE  0.82 pp | Tobit  +4.26 | ICG  +1.57
+  depth x1, admit 0.40 | TRUE  1.23 pp | Tobit  +4.32 | ICG  +1.22
+  depth x1, admit 0.20 | TRUE  1.64 pp | Tobit  +4.39 | ICG  +0.77
+  depth x2, admit 1.00 | TRUE  0.00 pp | Tobit  +3.87 | ICG  +1.57
+  depth x2, admit 0.60 | TRUE  1.64 pp | Tobit  +4.55 | ICG  +2.93
+  depth x2, admit 0.40 | TRUE  2.46 pp | Tobit  +4.66 | ICG  +2.62
+  depth x2, admit 0.20 | TRUE  3.28 pp | Tobit  +5.35 | ICG  +1.05
+  depth x3, admit 1.00 | TRUE  0.00 pp | Tobit  +3.87 | ICG  +1.62
+  depth x3, admit 0.60 | TRUE  2.46 pp | Tobit  +5.03 | ICG  +3.35
+  depth x3, admit 0.40 | TRUE  3.69 pp | Tobit  +5.96 | ICG  +3.82
+  depth x3, admit 0.20 | TRUE  4.92 pp | Tobit  +7.15 | ICG  +2.20
+
+Across all 12 configurations (true suppression 0.00-4.92 pp):
+  corr(true, Tobit correction) = +0.960
+  corr(true, ICG   correction) = +0.454
+  mean |calibration error|: Tobit 2.93 pp, ICG 1.12 pp
+
+saved -> results/exp1d_magnitude_sweep.csv, exp1d_summary.json
