@@ -2,8 +2,7 @@
 
 Interval-censored demand recovery and compositional dispatch forecasting for rationed
 power systems. Research code for a study of the Bangladesh national grid (PGCB hourly records,
-April 2015 – March 2026) targeting *IEEE Transactions on Sustainable Energy /
-Smart Grid*.
+April 2015 – March 2026)
 
 ## What this does
 
