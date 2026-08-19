@@ -7,7 +7,7 @@ forces them all to the back of the paper.
 import re, pathlib
 
 src = pathlib.Path('paper/tables.tex').read_text(encoding='utf-8')
-out_dir = pathlib.Path('paper/tabs'); out_dir.mkdir(exist_ok=True)
+out_dir = pathlib.Path('paper/tabs'); out_dir.mkdir(parents=True, exist_ok=True)
 
 # split on table / table* openers, keeping the delimiter
 chunks = re.split(r'(?=\\begin\{table\*?\})', src)

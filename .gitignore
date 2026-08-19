@@ -17,3 +17,6 @@ Thumbs.db
 # src/01_clean.py; the smaller processed files are kept so the modelling stages
 # can be run without re-downloading weather data.
 data/hourly_clean.csv
+
+# pipeline logs
+logs/

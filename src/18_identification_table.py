@@ -44,6 +44,7 @@ out.append(f'Placebo sd (2016--2021) & -- & -- & {floor0:.2f} & {R["placebo_sd_b
            f'{floor2:.2f} & {R["placebo_sd_both"]:.2f} & ' + BS)
 out.append(r'\bottomrule\end{tabular}\end{table*}')
 
+pathlib.Path('paper/tabs').mkdir(parents=True, exist_ok=True)
 pathlib.Path('paper/tabs/ident.tex').write_text('\n'.join(out) + '\n', encoding='utf-8')
 print('wrote paper/tabs/ident.tex')
 print(f'  real tariff change 2021->2025: {R["real_tariff_change_2021_2025_pct"]:+.1f}%')

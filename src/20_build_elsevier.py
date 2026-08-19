@@ -8,6 +8,17 @@ files, re-run, and both rebuild.
 import pathlib, re
 
 paper = pathlib.Path('paper')
+if not (paper / 'main.tex').exists():
+    raise SystemExit(
+        'paper/main.tex not found.
+'
+        'The manuscript sources are not distributed in this repository while the
+'
+        'paper is under review (see README). This builder converts the IEEE source
+'
+        'to Elsevier format and is included for completeness; every FIGURE and TABLE
+'
+        'it references is reproducible by running stages 01-19.')
 src = (paper / 'main.tex').read_text(encoding='utf-8')
 
 # ---- body: everything from the Nomenclature to just before the bibliography ----

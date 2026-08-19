@@ -1,5 +1,5 @@
 """Emit the accounting-identity table (Sec. III-B); appended to paper/tables.tex."""
-import pandas as pd
+import pandas as pd, os
 
 BS = chr(92)*2          # LaTeX row terminator, built without escape sequences
 
