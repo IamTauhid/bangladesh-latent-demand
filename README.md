@@ -2,8 +2,7 @@
 
 Interval-censored demand recovery and compositional dispatch forecasting for rationed
 power systems. Research code and reproducible results for a study of the Bangladesh
-national grid (PGCB hourly records, April 2015 – March 2026), prepared for submission
-to *Energy Policy*.
+national grid (PGCB hourly records, April 2015 – March 2026).
 
 **Headline result:** the demand series Bangladesh publishes is an accounting identity
 of supply, not a measurement of demand. Suppressed demand in 2023 was between
