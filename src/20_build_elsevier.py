@@ -10,15 +10,11 @@ import pathlib, re
 paper = pathlib.Path('paper')
 if not (paper / 'main.tex').exists():
     raise SystemExit(
-        'paper/main.tex not found.
-'
-        'The manuscript sources are not distributed in this repository while the
-'
-        'paper is under review (see README). This builder converts the IEEE source
-'
-        'to Elsevier format and is included for completeness; every FIGURE and TABLE
-'
-        'it references is reproducible by running stages 01-19.')
+        'paper/main.tex not found. The manuscript sources are not distributed '
+        'in this repository while the paper is under review (see README). This '
+        'builder converts the IEEE source to Elsevier format and is included '
+        'for completeness; every figure and table it references is reproducible '
+        'by running stages 01-19.')
 src = (paper / 'main.tex').read_text(encoding='utf-8')
 
 # ---- body: everything from the Nomenclature to just before the bibliography ----
@@ -126,6 +122,15 @@ weather variables are derived from the NASA POWER daily API.
 \section*{Declaration of competing interest}
 The authors declare no competing financial interests or personal relationships that
 could have appeared to influence the work reported in this paper.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the writing
+process}
+During the preparation of this work the authors used Claude (Anthropic) in order to
+assist with software development for the analysis pipeline, and to draft and edit
+portions of the manuscript text. After using this tool the authors reviewed and
+edited the content as needed and take full responsibility for the content of the
+publication. The research question, the identification strategy, the interpretation
+of results, and all scientific claims are the authors' own.
 
 \bibliographystyle{elsarticle-num}
 \input{refs}
