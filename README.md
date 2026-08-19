@@ -1,8 +1,13 @@
 # Interval-Censored Learning for Latent Demand and Dispatch Composition
 
 Interval-censored demand recovery and compositional dispatch forecasting for rationed
-power systems. Research code for a study of the Bangladesh national grid (PGCB hourly records,
-April 2015 – March 2026)
+power systems. Research code and reproducible results for a study of the Bangladesh
+national grid (PGCB hourly records, April 2015 – March 2026), prepared for submission
+to *Energy Policy*.
+
+**Headline result:** the demand series Bangladesh publishes is an accounting identity
+of supply, not a measurement of demand. Suppressed demand in 2023 was between
+**3.0% and 9.9%** of served energy, against **2.97%** officially admitted.
 
 ## What this does
 
@@ -64,6 +69,7 @@ python src/16_alpha_sensitivity.py  # sensitivity to alpha_min
 python src/17_identification.py     # partial identification + confound controls
 python src/18_identification_table.py  # -> paper/tabs/ident.tex
 python src/19_sweep_magnitude.py   # extended synthetic sweep (0-4.9 pp)
+python src/20_build_elsevier.py    # build the Energy Policy manuscript
 ```
 
 Stages 10 and 11 write figures and LaTeX tables into `paper/`, which is not
@@ -123,6 +129,45 @@ src/                     pipeline (numbered, run in order)
 data/                    cleaned daily series, weather, feature matrix
 results/                 metrics, audits, predictions (json/csv/npz)
 ```
+
+## How to cite
+
+If you use this code or the derived results, please cite the paper (under review) and
+the underlying dataset:
+
+```bibtex
+@unpublished{islam2026latent,
+  author = {Islam, Md Tauhidul and Mohiuddin, Saifullah},
+  title  = {Interval-Censored Learning for Latent Demand and Dispatch
+            Composition in Rationed Power Systems: Evidence from Bangladesh},
+  note   = {Manuscript under review},
+  year   = {2026},
+  url    = {https://github.com/IamTauhid/bangladesh-latent-demand}
+}
+
+@misc{shekh2026pgcb,
+  author    = {Shekh, Md Ibrahim and Rafi, Rakibul Hasan},
+  title     = {Hourly Electricity Generation, Demand, Load Shedding, and
+               Fuel Mix Dataset for Bangladesh (2015--2026)},
+  publisher = {Mendeley Data},
+  version   = {V1},
+  year      = {2026},
+  doi       = {10.17632/vpk8spw2mm.1}
+}
+```
+
+## Reproducing the headline numbers
+
+| Claim | Value | Produced by |
+|---|---|---|
+| Published demand = served generation, pre-2022 | 90.1% of hours | `src/12_identity_table.py` |
+| Days censored by load shedding, 2023–24 | 81.4% / 78.1% | `results/clean_audit.json` |
+| Shedding probability across the 24 hours | 37–53% (flat) | `src/10_figures.py` (Fig. 2b) |
+| 2023 suppression bounds | [3.0, 9.9] pp | `src/17_identification.py` |
+| Structural estimate, price + activity controlled | 5.6 pp | `src/17_identification.py` |
+| Real tariff change, 2021→2025 | −13.7% | `src/17_identification.py` |
+| Day-ahead Aitchison improvement | 23.1% | `src/07_composition.py` |
+| WACOG 2025 vs published FY2025 | 11.54 vs 12.10 BDT/kWh | `src/08_economics.py` |
 
 ## Manuscript
 
